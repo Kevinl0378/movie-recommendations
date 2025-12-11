@@ -1,0 +1,10 @@
+numpy
+pandas
+collections
+matplotlib
+seaborn
+os
+random
+torch
+tensorflow
+keras
