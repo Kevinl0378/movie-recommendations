@@ -24,16 +24,25 @@ This project uses the [MovieLens (latest-small)](https://files.grouplens.org/dat
 - The architecture consists of a 256-unit LSTM layer followed by dense layers of sizes 512, 256, and 128.
 - Regularization includes a dropout rate of 0.1 and early stopping based on validation HR@10. The model is trained with the Adam optimizer using a batch size of 256.
 
-## Key Results
+## Key Results: Metrics and Visualizations
 | Model | HR@5 (Negative Sampling) | HR@10 (Negative Sampling) |
 |---|---|---|
 | ItemPop | 40.66% | 57.87% |
 | Milestone Model | 47.21% | 62.62% |
 | Final Model | 56.07% | 69.51% |
 
-
+### Insights
 - The final context-aware LSTM model outperforms both baselines at every value of K (K = 1-10), demonstrating that additional context can be helpful for next-movie prediction.
 - The milestone LSTM model provides a small but consistent improvement over the ItemPop baseline, demonstrating that even a simple sequence model can capture temporal patterns.
+
+### Hit Ratio @ K
+<img src="figures/Hit%20Ratio%20@%20K.png" width=45%>
+
+### Milestone Model: Training and Validation Curves
+<img src="figures/Milestone%20Model%20-%20Training%20and%20Validation%20Curves.png" width=45%>
+
+### Final Model: Training and Validation Curves
+<img src="figures/Final%20Model%20-%20Training%20and%20Validation%20Curves.png" width=45%>
 
 ## How to Run the Code
 1. Install dependencies
