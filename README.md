@@ -60,7 +60,7 @@ This repo includes two types of notebooks:
    ```
    source .venv/bin/activate
    ```
-4. **Install dependencies**
+3. **Install dependencies**
    ```
    pip install -r requirements.txt
    ```
@@ -68,7 +68,7 @@ This repo includes two types of notebooks:
    ```
    pip install jupyter
    ```
-6. **Run the notebooks**
+4. **Run the notebooks**
    - Option A: Run the notebooks in VS Code
         - Open any `.ipynb` file (e.g. `project_demo.ipynb`)
         - When VS Code prompts you to select a kernel, choose the `.venv` environment
