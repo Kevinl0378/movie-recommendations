@@ -12,13 +12,13 @@ This project uses the [MovieLens (latest-small)](https://files.grouplens.org/dat
 **Note:** To acquire the data used in this project, please visit this [link](https://grouplens.org/datasets/movielens/) and download the file titled `ml-latest-small.zip`.
 
 ## Model Overview
-### Baseline Models
+### Baseline Models `(notebooks/baseline_model.ipynb)`
 1. ItemPop (Popularity Baseline)
    - This model ranks movies solely by their overall frequency in the training set, providing a simple, non-personalized baseline that reflects popularity trends.
 2. Milestone LSTM Model
    - This initial model takes only the sequence of movie IDs as input, without incorporating genre or rating context. While it captures some sequential structure, it suffers from severe overfitting and therefore underperformed during evaluation (see `Key Results` section for a visualization of training vs. validation accuracy).
   
-### Final Model
+### Final Model `(notebooks/final_model.ipynb)`
 - An LSTM was used because next-movie prediction is inherently sequential, and LSTMs are well-suited for capturing sequential structure without succumbing to the vanishing gradient problem.
 - The model accepts three inputs: the movie ID sequence, a 19-dimensional genre vector, and a normalized rating between 0 and 1 for each time step.
 - The architecture consists of a 256-unit LSTM layer followed by dense layers of sizes 512, 256, and 128.
